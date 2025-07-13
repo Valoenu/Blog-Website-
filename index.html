@@ -1,0 +1,20 @@
+{{% include 'header.html' %}}
+
+<!-- Page header -->
+        <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto">
+                        <div class="post-heading">
+                            <h1>{{blog_content['title']}}</h1>
+                            <h2 class="subheading">{{blog_content['subtitle']}}</h2>
+                            <span class="meta">
+                                Posted by
+                                <a href="#!">{{blog_content['author']}}</a>
+                                on {{blog_content['date']}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
