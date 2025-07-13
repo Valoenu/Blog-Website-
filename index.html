@@ -1,20 +1,49 @@
-{{% include 'header.html' %}}
+{% include 'header.html' %}
 
-<!-- Page header -->
-        <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
-            <div class="container">
-                <div class="row">
+
+         <header class="masthead" style="background-image: url('Your Image url here')">
+             <div class="overlay"></div>
+             <div class="container">
+               <div class="row">
                     <div class="col-md-10 col-lg-8 mx-auto">
-                        <div class="post-heading">
-                            <h1>{{blog_content['title']}}</h1>
-                            <h2 class="subheading">{{blog_content['subtitle']}}</h2>
-                            <span class="meta">
-                                Posted by
-                                <a href="#!">{{blog_content['author']}}</a>
-                                on {{blog_content['date']}}
-                            </span>
+                        <div class="site-heading">
+                            <h1>Your blog name here</h1>
+                            <span class="subheading">Your subheading here</span>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        
+        <!-- Main Content-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    {% for posts in all_posts %}
+                    <div class="post-preview">
+                        <a href="{{ for_url('post')}}"">
+                            <h2 class="post-title">
+                                {{blog_content.title}}
+                            </h2> 
+                            <h3 class="post-subtitle">{{blog_content.subtitile}}</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">{{blog_content.author}}</a>
+                            on {{blog_content.date}}
+                        </p>
+                    </div>
+                    <hr>
+                    {% endfor %}
+
+
+                            <!-- Pager -->
+                            <div class="clearfix">
+                              <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    
+{% include 'footer.html' %}
