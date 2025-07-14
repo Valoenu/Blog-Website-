@@ -1,4 +1,4 @@
-**Quick SMTPLIB Tutorial**
+*Quick SMTPLIB Tutorial*
 
 # Emails structure
 import smtplib # To send emails
